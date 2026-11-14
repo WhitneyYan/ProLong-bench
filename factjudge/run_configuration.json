@@ -1,0 +1,47 @@
+{
+  "name": "FactJudge-v1",
+  "frozen_date": "2026-09-16",
+  "gold_support": {
+    "model": "deepseek-flash",
+    "reasoning_effort": "low",
+    "response_format": {
+      "type": "json_object"
+    },
+    "extra_body": {
+      "thinking": {
+        "type": "enabled"
+      }
+    },
+    "stream": false,
+    "max_tokens": null,
+    "max_tokens_policy": "not sent unless explicitly configured",
+    "temperature_policy": "not explicitly set in the scoring request",
+    "prompt_sha256": "a90c80f775d1e18b4bcd43ec32c69a7653c4468ac9a1f96998570fe026c904a1",
+    "user_message_template": "REFERENCE CLAIMS:\n<compact JSON array of claim_id and claim>\n\nPREDICTION:\n<complete prediction>"
+  },
+  "prediction_relevance": {
+    "model": "deepseek-flash",
+    "reasoning_effort": "low",
+    "response_format": {
+      "type": "json_object"
+    },
+    "extra_body": {
+      "thinking": {
+        "type": "enabled"
+      }
+    },
+    "stream": false,
+    "prompt_sha256": "163092da987f1fc2166d8ebabd6b43916e50e44b697c48c3e2540441d2d3936c",
+    "user_message_template": "PREDICTION:\n<complete prediction>\n\nREFERENCE:\n<complete reference>"
+  },
+  "gold_claim_decomposition": {
+    "model": "deepseek-flash",
+    "temperature": 0.0,
+    "response_format": {
+      "type": "json_object"
+    },
+    "stream": false,
+    "prompt_sha256": "12be8cd014fc0320a00e3190853b76e87520c9a3a2b04772d43845ff265b6084",
+    "user_message_template": "Split the following protein description into atomic claims.\n\nDescription:\n<description>\n\nReturn this JSON object:\n{\"claims\": [{\"claim\": \"...\"}, {\"claim\": \"...\"}]}"
+  }
+}

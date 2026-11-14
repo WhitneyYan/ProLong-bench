@@ -1,0 +1,16 @@
+{
+  "judgments": [
+    {
+      "claim_id": "W1:20260128:A0A125YHX7:A.0:001",
+      "support_score": 0,
+      "contradiction_score": 0,
+      "dimension_scores": {
+        "entity_and_object": 0,
+        "relation_and_direction": 0,
+        "specificity": null,
+        "conditions": null,
+        "certainty": null
+      }
+    }
+  ]
+}

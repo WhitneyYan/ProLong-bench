@@ -1,0 +1,61 @@
+window,track,reference_set,model,reference_n,prediction_n
+W1,all,full,biomatrix,630,630
+W1,all,full,pfua,630,630
+W1,all,full,evolla,630,630
+W1,all,full,bioreason,630,630
+W1,all,full,prot2text_v2,630,630
+W1,all,full,biot5_plus,630,630
+W1,A,paired,biomatrix,291,291
+W1,A,paired,pfua,291,291
+W1,A,paired,evolla,291,291
+W1,A,paired,bioreason,291,291
+W1,A,paired,prot2text_v2,291,291
+W1,A,paired,biot5_plus,291,291
+W2,all,full,biomatrix,462,462
+W2,all,full,pfua,462,462
+W2,all,full,evolla,462,462
+W2,all,full,bioreason,462,457
+W2,all,full,prot2text_v2,462,462
+W2,all,full,biot5_plus,462,462
+W2,A,paired,biomatrix,243,243
+W2,A,paired,pfua,243,243
+W2,A,paired,evolla,243,243
+W2,A,paired,bioreason,243,242
+W2,A,paired,prot2text_v2,243,243
+W2,A,paired,biot5_plus,243,243
+W1,A,A.0,biomatrix,291,291
+W1,A,A.0,bioreason,291,291
+W1,A,A.0,biot5_plus,291,291
+W1,A,A.0,evolla,291,291
+W1,A,A.0,pfua,291,291
+W1,A,A.0,prot2text_v2,291,291
+W1,A,A.1,biomatrix,291,291
+W1,A,A.1,bioreason,291,291
+W1,A,A.1,biot5_plus,291,291
+W1,A,A.1,evolla,291,291
+W1,A,A.1,pfua,291,291
+W1,A,A.1,prot2text_v2,291,291
+W1,B,Track B,biomatrix,157,157
+W1,B,Track B,bioreason,157,157
+W1,B,Track B,biot5_plus,157,157
+W1,B,Track B,evolla,157,157
+W1,B,Track B,pfua,157,157
+W1,B,Track B,prot2text_v2,157,157
+W2,A,A.0,biomatrix,243,243
+W2,A,A.0,bioreason,243,242
+W2,A,A.0,biot5_plus,243,243
+W2,A,A.0,evolla,243,243
+W2,A,A.0,pfua,243,243
+W2,A,A.0,prot2text_v2,243,243
+W2,A,A.1,biomatrix,243,243
+W2,A,A.1,bioreason,243,242
+W2,A,A.1,biot5_plus,243,243
+W2,A,A.1,evolla,243,243
+W2,A,A.1,pfua,243,243
+W2,A,A.1,prot2text_v2,243,243
+W2,B,Track B,biomatrix,90,90
+W2,B,Track B,bioreason,90,90
+W2,B,Track B,biot5_plus,90,90
+W2,B,Track B,evolla,90,90
+W2,B,Track B,pfua,90,90
+W2,B,Track B,prot2text_v2,90,90

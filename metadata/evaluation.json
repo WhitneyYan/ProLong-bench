@@ -1,0 +1,81 @@
+{
+  "package_type": "anonymous_benchmark_evaluation_data",
+  "version": "3.0",
+  "models": [
+    "biomatrix",
+    "pfua",
+    "evolla",
+    "bioreason",
+    "prot2text_v2",
+    "biot5_plus"
+  ],
+  "dataset_axes": {
+    "window": [
+      "W1",
+      "W2"
+    ],
+    "track": [
+      "A",
+      "B"
+    ],
+    "record_id": "Unique paper-window/date/accession key; actual annotation dates do not create additional windows.",
+    "view": "A.0/A.1 subdivide Track A reference content; Track B uses its complete target reference.",
+    "cohort": "full and paired are population selections, not tracks. Aggregate track=all combines A and B."
+  },
+  "unique_record_ids": 1097,
+  "cohort_memberships": 1626,
+  "prediction_rows_per_model": {
+    "biomatrix": 1097,
+    "pfua": 1097,
+    "evolla": 1097,
+    "bioreason": 1092,
+    "prot2text_v2": 1097,
+    "biot5_plus": 1097
+  },
+  "reference_claims": 10040,
+  "original_model_claim_scores": 60235,
+  "prediction_relevance": {
+    "cases": 139,
+    "claims": 2097,
+    "models": [
+      "biomatrix",
+      "evolla",
+      "pfua"
+    ],
+    "scope": "Original risk-screened diagnostic subset; not full-benchmark coverage. Actual input dates are retained and records may differ from the final paper selection."
+  },
+  "evaluation": {
+    "original_judge": "deepseek-flash",
+    "judge_reasoning_effort": "low",
+    "support_scale": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "recall": "mean(support_score / 4) within protein and view, followed by equal protein weighting",
+    "miss": "all reference claims in a protein/view have support_score < 2",
+    "component_scale": [
+      0,
+      1,
+      2
+    ],
+    "not_applicable": "NA; not scored as zero",
+    "protocol": "factjudge/README.md",
+    "request_configuration": "factjudge/run_configuration.json"
+  },
+  "code_included": false,
+  "api_logs_or_credentials_included": false,
+  "rebuttal_analyses_included": false,
+  "excluded_materials": [
+    "literature audits",
+    "T/D/J human reviews",
+    "difficulty matching",
+    "paired statistical comparisons",
+    "claim-count controls",
+    "temporal exclusion sensitivity",
+    "second-judge validation",
+    "answer-length correlations"
+  ]
+}

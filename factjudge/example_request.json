@@ -1,0 +1,23 @@
+{
+  "model": "deepseek-flash",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Score atomic reference claims against one protein prediction.\n\nUse only the prediction as evidence. Do not use outside knowledge.\nThe omitted subject of each atomic reference claim is the same protein described by the prediction.\n\nOverall support score:\n- 4: Complete support. All essential entities, objects, relations, directions, and conditions are stated exactly or by faithful paraphrase.\n- 3: The core fact is supported, but one non-critical qualifier is omitted or certainty is slightly weaker.\n- 2: Partial support. The central function is related and partly correct, but an important detail, object, mechanism, or condition is missing.\n- 1: Only the broad topic or function class is related; the specific claim is not supported.\n- 0: No relevant support, or the prediction explicitly contradicts the claim.\n\nContradiction score:\n- 0: No contradiction.\n- 1: Potential incompatibility, but no explicit opposite assertion.\n- 2: Explicit negation, opposite direction/effect, or mutually exclusive assertion about the same entities and relation.\n\nDimension scores use 0 for wrong/missing, 1 for partial/broader, and 2 for complete match.\nUse null only when a dimension is not applicable. Specificity is null when the relevant entity or relation is absent or mismatched. Conditions are contextual qualifiers such as cell type, biological state, infection context, stimulus, or developmental stage; reaction participants, products, and mechanisms are not conditions.\n\nRules:\n1. Score every supplied claim exactly once and preserve each claim_id exactly.\n2. A different function or object is not a contradiction unless the prediction explicitly rules out the reference claim.\n3. An uncertain prediction (for example, \"may\") does not fully support a definite claim. A definite prediction may support an otherwise identical uncertain claim.\n4. Extra statements in the prediction do not affect support for a reference claim.\n5. If contradiction_score is 2, support_score must be 0.\n6. If entity_and_object or relation_and_direction is 0, support_score cannot exceed 1.\n7. A support_score of 4 requires entity_and_object=2, relation_and_direction=2, contradiction_score=0, and every other applicable dimension=2.\n8. Return integers and null only. Do not return labels, evidence, rationales, or other fields.\n9. Return one JSON object and no other text.\n\nReturn this schema:\n{\n  \"judgments\": [\n    {\n      \"claim_id\": \"copied exactly from the input\",\n      \"support_score\": 0,\n      \"contradiction_score\": 0,\n      \"dimension_scores\": {\n        \"entity_and_object\": 0,\n        \"relation_and_direction\": 0,\n        \"specificity\": null,\n        \"conditions\": null,\n        \"certainty\": null\n      }\n    }\n  ]\n}\n"
+    },
+    {
+      "role": "user",
+      "content": "REFERENCE CLAIMS:\n[{\"claim_id\":\"W1:20260128:A0A125YHX7:A.0:001\",\"claim\":\"Acts as a calcium sensor\"}]\n\nPREDICTION:\nPlays a fundamental role in microtubule-organizing center structure and function."
+    }
+  ],
+  "reasoning_effort": "low",
+  "response_format": {
+    "type": "json_object"
+  },
+  "extra_body": {
+    "thinking": {
+      "type": "enabled"
+    }
+  },
+  "stream": false
+}

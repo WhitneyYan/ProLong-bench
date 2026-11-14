@@ -1,0 +1,42 @@
+file,rows,description
+benchmark/cohorts.csv,1626,"Frozen full and strict paired cohorts, actual source dates, cluster IDs and model availability."
+benchmark/split_summary.csv,6,"Dataset counts by paper window, biological track and cohort; these are independent axes."
+benchmark/proteins.csv,1097,"Protein sequences, old/new FUNCTION text and the exact evaluation full-reference text."
+predictions/biomatrix.csv,1097,"Final evaluated model answer, keyed by record_id and model; absent predictions are omitted."
+predictions/pfua.csv,1097,"Final evaluated model answer, keyed by record_id and model; absent predictions are omitted."
+predictions/evolla.csv,1097,"Final evaluated model answer, keyed by record_id and model; absent predictions are omitted."
+predictions/bioreason.csv,1092,"Final evaluated model answer, keyed by record_id and model; absent predictions are omitted."
+predictions/prot2text_v2.csv,1097,"Final evaluated model answer, keyed by record_id and model; absent predictions are omitted."
+predictions/biot5_plus.csv,1097,"Final evaluated model answer, keyed by record_id and model; absent predictions are omitted."
+benchmark/reference_claims.csv,10040,Frozen atomic reference claims with complete reference context and original claim IDs.
+benchmark/reference_views.csv,1315,"A.0, A.1 and Track B reference views."
+scores/model_claim_scores.csv,60235,Saved evaluation output; see DATA_DICTIONARY.md for keys and score definitions.
+scores/model_protein_scores.csv,7888,Saved evaluation output; see DATA_DICTIONARY.md for keys and score definitions.
+scores/full_description_claim_scores.csv,76252,Saved evaluation output; see DATA_DICTIONARY.md for keys and score definitions.
+scores/full_description_protein_scores.csv,6547,Saved evaluation output; see DATA_DICTIONARY.md for keys and score definitions.
+scores/paired_full_description_scores.csv,3203,Saved evaluation output; see DATA_DICTIONARY.md for keys and score definitions.
+scores/baseline_claim_scores.csv,18671,Saved evaluation output; see DATA_DICTIONARY.md for keys and score definitions.
+scores/baseline_protein_scores.csv,2158,Saved evaluation output; see DATA_DICTIONARY.md for keys and score definitions.
+baselines/predictions.csv,1315,Saved evaluation output; see DATA_DICTIONARY.md for keys and score definitions.
+metrics/coverage.csv,60,Saved evaluation output; see DATA_DICTIONARY.md for keys and score definitions.
+metrics/full_population_metrics.csv,24,Saved evaluation output; see DATA_DICTIONARY.md for keys and score definitions.
+metrics/same_cohort_metrics.csv,96,Saved evaluation output; see DATA_DICTIONARY.md for keys and score definitions.
+metrics/full_population_per_sample.csv,6547,Saved evaluation output; see DATA_DICTIONARY.md for keys and score definitions.
+metrics/same_cohort_per_sample.csv,11091,Saved evaluation output; see DATA_DICTIONARY.md for keys and score definitions.
+metrics/full_population_factjudge.csv,24,Saved evaluation output; see DATA_DICTIONARY.md for keys and score definitions.
+metrics/baseline_coverage.csv,6,Saved evaluation output; see DATA_DICTIONARY.md for keys and score definitions.
+metrics/baseline_summary.csv,10,Saved evaluation output; see DATA_DICTIONARY.md for keys and score definitions.
+metrics/model_factjudge_summary.csv,36,Direct equal-protein aggregation of the released model_protein_scores.csv; no statistical comparisons.
+factjudge/relevance_inputs.csv,139,Exact inputs of the original 139-case risk-screened complementary relevance evaluation; source endpoints are preserved.
+scores/prediction_relevance_claim_scores.csv,2097,"Original parsed prediction-side relevance judgments, without API envelopes or inference logs."
+benchmark/W1/Track_A/proteins.csv,473,Full-population proteins for this merged paper window and track.
+benchmark/W1/Track_B/proteins.csv,157,Full-population proteins for this merged paper window and track.
+benchmark/W1/Track_A/A.0.csv,3643,"Actual evaluation reference claims, complete view text and protein keys for W1 A.0."
+benchmark/W1/Track_A/A.1.csv,690,"Actual evaluation reference claims, complete view text and protein keys for W1 A.1."
+benchmark/W1/Track_B/full.csv,456,"Actual evaluation reference claims, complete view text and protein keys for W1 Track B."
+benchmark/W2/Track_A/proteins.csv,372,Full-population proteins for this merged paper window and track.
+benchmark/W2/Track_B/proteins.csv,90,Full-population proteins for this merged paper window and track.
+benchmark/W2/Track_A/A.0.csv,4434,"Actual evaluation reference claims, complete view text and protein keys for W2 A.0."
+benchmark/W2/Track_A/A.1.csv,573,"Actual evaluation reference claims, complete view text and protein keys for W2 A.1."
+benchmark/W2/Track_B/full.csv,244,"Actual evaluation reference claims, complete view text and protein keys for W2 Track B."
+benchmark/evaluation_sets.csv,6,"Actual A.0, A.1 and Track B evaluation-set sizes in each of the two merged paper windows."
